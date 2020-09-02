@@ -174,7 +174,7 @@ class SiteMapper {
 
   async getSitemapURLs(dir) {
     let pathMap = this.buildPathMap(dir)
-    const exportTrailingSlash = this.nextConfig && this.nextConfig.exportTrailingSlash
+    const exportTrailingSlash = this.nextConfig && this.nextConfig.exportTrailingSlash || this.nextConfig.trailingSlash
 
     const exportPathMap = this.nextConfig && this.nextConfig.exportPathMap
     if (exportPathMap) {
